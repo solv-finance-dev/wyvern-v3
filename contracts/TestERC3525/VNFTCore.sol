@@ -45,12 +45,12 @@ abstract contract VNFTCore is IVNFT, ERC721 {
         string memory symbol_,
         string memory baseURI_,
         string memory contractURI_
-    ) internal ERC721(name_, symbol_) {
+    ) ERC721(name_, symbol_) {
         ERC721._setBaseURI(baseURI_);
         _contractURI = contractURI_;
     }
 
-    function _setContractURI(string memory uri_) internal {
+   function _setContractURI(string memory uri_) internal {
         _contractURI = uri_;
     }
 
